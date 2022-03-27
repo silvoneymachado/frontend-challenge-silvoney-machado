@@ -1,3 +1,4 @@
+import { HolidayComponent } from './../holiday/holiday.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -7,14 +8,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './home.component';
+import { CountryComponent } from '../country/country.component';
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [CountryComponent, HolidayComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
@@ -27,6 +29,7 @@ import { HomeComponent } from './home.component';
     MatInputModule,
     MatIconModule,
     MatProgressSpinnerModule,
+    MatSelectModule,
   ],
 })
 export class HomeModule {}

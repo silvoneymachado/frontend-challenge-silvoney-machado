@@ -1,0 +1,19 @@
+.holiday-card{
+    height: 87%;
+    margin-top: 10px;
+    margin-left: clamp(0px, 5vw, 200px);
+    margin-right: clamp(0px, 5vw, 200px);
+    overflow: auto;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.loading-container .title {
+    margin-top: 10px;
+}

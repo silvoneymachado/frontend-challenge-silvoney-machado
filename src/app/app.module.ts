@@ -7,9 +7,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InterceptorModule } from './network/interceptor/interceptor.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AutofocusDirective } from './shared/directives/autofocus/autofocus.directive';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, AutofocusDirective, PageNotFoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

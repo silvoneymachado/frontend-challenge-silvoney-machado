@@ -7,6 +7,10 @@ export interface Holiday {
   types: string[];
 }
 
+export interface HolidayResponse {
+  holidays: Holiday[];
+}
+
 export interface HolidayRequest {
   country_code: string,
   year: string,

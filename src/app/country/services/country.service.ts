@@ -1,9 +1,8 @@
-import { Holiday, HolidayRequest } from "./../models/holiday";
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 
-import { Country, CountryResponse } from "../models/country";
-import { delay, first, Observable, tap } from "rxjs";
+import { CountryResponse } from "../../models/country";
+import { first, Observable, tap } from "rxjs";
 import { environment } from "src/environments/environment";
 
 @Injectable({
@@ -18,14 +17,6 @@ export class CountryService {
     // return this.httpClient.post<CountryResponse>(`${this.API_URL}/holidays/Countries`, {});
     return this.httpClient.get<CountryResponse>(this.MOCK_API_FILE).pipe(
       first(),
-      delay(2000),
-    );
-  }
-
-  holidays(holidayRequest: HolidayRequest): Observable<Holiday[]> {
-    return this.httpClient.post<Holiday[]>(
-      `${this.API_URL}/holidays/Holidays`,
-      holidayRequest
     );
   }
 }
