@@ -1,0 +1,27 @@
+<mat-card class="country-card">
+    <div *ngIf="countries$ | async; else loading">
+        <mat-card-header class="country-card-header">
+            <mat-card-title>{{ title }}</mat-card-title>
+            <mat-card-subtitle>
+                <mat-form-field appearance="outline">
+                    <mat-label>Search</mat-label>
+                    <input matInput placeholder="Search desired country" [(ngModel)]="filterTerm" />
+                    <mat-icon class="clear-btn" matSuffix (click)="clearFilterTerm()">clear</mat-icon>
+                </mat-form-field>
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="country-card-content">
+            <mat-selection-list [multiple]="false">
+                <mat-list-option *ngFor="let country of countries | filter: filterTerm" [value]="country.code">
+                    {{country.name}}
+                </mat-list-option>
+            </mat-selection-list>
+        </mat-card-content>
+    </div>
+    <ng-template #loading>
+        <div class="loading-container">
+            <mat-spinner></mat-spinner>
+            <mat-card-title class="title">Loading...</mat-card-title>
+        </div>
+    </ng-template>
+</mat-card>
