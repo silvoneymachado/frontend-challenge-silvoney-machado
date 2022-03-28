@@ -27,6 +27,8 @@ testem.log
 typings/
 .angular/
 .env
+environment.prod.ts
+environment.dev.ts
 
 # e2e
 e2e/*.js
