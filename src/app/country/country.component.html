@@ -10,7 +10,7 @@
                 </mat-form-field>
                 <mat-form-field appearance="outline" class="input-group">
                     <mat-label>Year</mat-label>
-                    <mat-select [(ngModel)]="selectedYear">
+                    <mat-select [(ngModel)]="selectedYear" class="country-select">
                         <mat-option *ngFor="let year of years" [value]="year">
                             {{year}}
                         </mat-option>

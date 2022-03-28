@@ -1,25 +1,29 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
+import { AccountService } from '../services/account.service';
 import { LayoutComponent } from './layout.component';
 
-describe('LayoutComponent', () => {
+describe("LayoutComponent", () => {
   let component: LayoutComponent;
   let fixture: ComponentFixture<LayoutComponent>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ LayoutComponent ]
-    })
-    .compileComponents();
-  });
+    TestBed.configureTestingModule({
+      imports: [RouterTestingModule, HttpClientModule],
+      declarations: [LayoutComponent],
+      providers: [AccountService],
+    }).compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(LayoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  beforeEach(() => {});
+
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
