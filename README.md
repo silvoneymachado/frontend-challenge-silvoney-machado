@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Visit deployed project
 ## Preview unstable
-Login with provided username and password
+Login with provided username and password  
 http://preview-frontend-challenge-silvoney-machado.vercel.app
 
 ## Production stable
