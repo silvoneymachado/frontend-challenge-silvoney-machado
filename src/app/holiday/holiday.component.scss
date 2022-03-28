@@ -1,19 +1,46 @@
-.holiday-card{
-    height: 87%;
-    margin-top: 10px;
-    margin-left: clamp(0px, 5vw, 200px);
-    margin-right: clamp(0px, 5vw, 200px);
-    overflow: auto;
+.holiday-card {
+  height: 87%;
+  margin-top: 10px;
+  margin-left: clamp(0px, 5vw, 200px);
+  margin-right: clamp(0px, 5vw, 200px);
+  overflow: auto;
+}
+
+.holiday-card-header {
+  display: flex;
+  justify-content: start;
 }
 
 .loading-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
 }
 
 .loading-container .title {
-    margin-top: 10px;
+  margin-top: 10px;
+}
+
+.back-btn {
+  cursor: pointer;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.holiday-table {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.mat-column-name {
+  padding-left: 5px;
+}
+
+.mat-column-local_name {
+  padding-left: 5px;
 }

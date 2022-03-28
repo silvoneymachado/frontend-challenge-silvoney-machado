@@ -17,7 +17,7 @@ export class CountryComponent implements OnInit {
 
   selectedYear = new Date().getFullYear();
 
-  title = "Select a country to show the holidays";
+  title = "Select a country to show its holidays";
 
   constructor(
     private countryService: CountryService,
@@ -36,9 +36,9 @@ export class CountryComponent implements OnInit {
     this.filterTerm = "";
   }
 
-  goToCountryHolidays(countryCode: string) {
+  goToCountryHolidays(country: Country) {
     this.router.navigate(["holiday"], {
-      state: { year: this.selectedYear, countryCode: countryCode },
+      state: { year: this.selectedYear, countryCode: country.code, country: country.name },
       relativeTo: this.route,
     });
   }

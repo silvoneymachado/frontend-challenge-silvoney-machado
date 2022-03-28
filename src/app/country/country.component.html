@@ -21,7 +21,7 @@
         <mat-card-content class="country-card-content">
             <mat-selection-list class="country-list-container" [multiple]="false">
                 <mat-list-option *ngFor="let country of countries | filter: filterTerm" [value]="country.code"
-                    (click)="goToCountryHolidays(country.code)">
+                    (click)="goToCountryHolidays(country)">
                     {{country.name}}
                 </mat-list-option>
             </mat-selection-list>

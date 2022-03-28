@@ -14,9 +14,12 @@ export class CountryService {
   constructor(private httpClient: HttpClient) {}
 
   list(): Observable<CountryResponse> {
-    // return this.httpClient.post<CountryResponse>(`${this.API_URL}/holidays/Countries`, {});
-    return this.httpClient.get<CountryResponse>(this.MOCK_API_FILE).pipe(
-      first(),
+    return this.httpClient.post<CountryResponse>(
+      `${this.API_URL}/holidays/Countries`,
+      {}
     );
+    // return this.httpClient.get<CountryResponse>(this.MOCK_API_FILE).pipe(
+    //   first(),
+    // );
   }
 }

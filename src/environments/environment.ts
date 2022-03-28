@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   apiURL: '',
+  authApiUrl: '',
   apiKey: '',
 };
 
