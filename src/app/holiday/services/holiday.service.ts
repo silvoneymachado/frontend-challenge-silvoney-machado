@@ -19,8 +19,5 @@ export class HolidayService {
       `${this.API_URL}/holidays/List`,
       holidayRequest
     );
-    // return this.httpClient.get<HolidayResponse>(this.MOCK_API_FILE).pipe(
-    //   first(),
-    // );
   }
 }

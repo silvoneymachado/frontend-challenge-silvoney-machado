@@ -1,7 +1,10 @@
 <mat-card class="login-card">
-    <div class="login-card-body">
+    <mat-card-header>
+        <mat-card-title>Welcome to Holidays app!</mat-card-title>
+        <mat-card-subtitle>Please, login to your account</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="login-card-body">
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
-            <mat-card-title>Login</mat-card-title>
             <div class="form-group">
                 <mat-form-field appearance="outline" class="input-group">
                     <mat-label>Username</mat-label>
@@ -24,10 +27,11 @@
                 </div>
             </div>
             <div class="form-group">
-                <button mat-raised-button [disabled]="loading" class="login-btn" color="primary"><span *ngIf="loading"
+                <button mat-raised-button [disabled]="f['password'].errors || f['username'].errors || loading"
+                    class="login-btn" color="primary"><span *ngIf="loading"
                         class="spinner-border spinner-border-sm mr-1"></span>
                     Login</button>
             </div>
         </form>
-    </div>
+    </mat-card-content>
 </mat-card>

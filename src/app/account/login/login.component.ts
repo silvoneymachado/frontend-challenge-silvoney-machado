@@ -28,11 +28,9 @@ export class LoginComponent implements OnInit {
       password: ["", Validators.required],
     });
 
-    // get return url from route parameters or default to '/'
     this.returnUrl = this.route.snapshot.queryParams["returnUrl"] || "/";
   }
 
-  // convenience getter for easy access to form fields
   get f() {
     return this.form.controls;
   }
@@ -43,15 +41,12 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-
-    // reset alerts on submit
-
-    // stop here if form is invalid
     if (this.form.invalid) {
       return;
     }
 
     this.loading = true;
+    this.shouldShowPassword = false;
     this.accountService
       .login(this.f["username"].value, this.f["password"].value)
       .pipe(first())
@@ -60,6 +55,7 @@ export class LoginComponent implements OnInit {
           this.router.navigate([this.returnUrl]);
         },
         (error) => {
+          alert(error.error.message);
           this.loading = false;
         }
       );

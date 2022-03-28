@@ -16,7 +16,6 @@ export class HolidayComponent implements OnInit {
   countryCode: string = "";
   country: string = "";
   holidays$: Observable<HolidayResponse> | undefined;
-  // holidays: Holiday[] = [];
   displayedColumns: string[] = ["date", "name", "local_name"];
 
   constructor(
@@ -42,9 +41,6 @@ export class HolidayComponent implements OnInit {
         year: this.year,
         country_code: this.countryCode,
       });
-      // this.holidays$.subscribe((item) => {
-      //   this.holidays = item.holidays;
-      // });
     });
   }
 }

@@ -1,5 +1,11 @@
-<mat-toolbar color="primary" class="app-toolbar">
+<mat-toolbar *ngIf="isLoggedIn" color="primary" class="app-toolbar">
   <span routerLink="/">Enjoy holidays!</span>
+  <div class="user-controls">
+    <span>Hello {{userName}} </span>
+    <span>
+      <mat-icon title="Logout" class="clear-btn" matSuffix (click)="logout()">logout</mat-icon>
+    </span>
+  </div>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
