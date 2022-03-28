@@ -2,6 +2,20 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
+## API key and credentials
+Please refer to the email
+
+
+# Visit deployed project
+## Preview unstable
+http://preview-frontend-challenge-silvoney-machado.vercel.app
+
+## Production stable
+http://frontend-challenge-silvoney-machado.vercel.app
+
+--------
+
+# Or run it locally
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
