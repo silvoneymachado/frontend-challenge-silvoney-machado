@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiURL: '',
-  authApiUrl: '',
+  apiURL: "https://api.m3o.com/v1",
+  authApiUrl: "https://jwt-node.vercel.app",
   apiKey: '',
 };
 
