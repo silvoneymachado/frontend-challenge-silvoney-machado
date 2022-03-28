@@ -13,7 +13,7 @@ import { CountryService } from './services/country.service';
 export class CountryComponent {
   countries: Country[] = [];
   countries$: Observable<CountryResponse>;
-  filterTerm!: string;
+  filterTerm: string = '';
 
   selectedYear = new Date().getFullYear();
 
