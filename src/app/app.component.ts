@@ -10,7 +10,7 @@ export class AppComponent {
   constructor(private accountService: AccountService) {}
 
   get userName(){
-    return this.accountService.userValue.username;
+    return this.accountService.userValue?.username;
   }
 
   get isLoggedIn(){

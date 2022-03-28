@@ -9,18 +9,18 @@ import { environment } from "src/environments/environment";
   providedIn: "root",
 })
 export class AccountService {
-  private userSubject: BehaviorSubject<User>;
-  public user: Observable<User>;
+  private userSubject: BehaviorSubject<User | null>;
+  public user: Observable<User | null>;
 
   constructor(private router: Router, private http: HttpClient) {
     const storagedUser = localStorage.getItem("user");
-    this.userSubject = new BehaviorSubject<User>(
+    this.userSubject = new BehaviorSubject<User | null>(
       storagedUser ? JSON.parse(storagedUser) : null
     );
     this.user = this.userSubject.asObservable();
   }
 
-  public get userValue(): User {
+  public get userValue(): User | null {
     return this.userSubject.value;
   }
 
@@ -42,7 +42,7 @@ export class AccountService {
 
   logout() {
     localStorage.removeItem("user");
-    // this.userSubject.next(null);
+    this.userSubject.next(null);
     this.router.navigate(["login"]);
   }
 }
