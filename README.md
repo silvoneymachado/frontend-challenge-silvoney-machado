@@ -2,6 +2,26 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
+# Visit deployed project
+## Preview unstable
+Login with provided username and password
+http://preview-frontend-challenge-silvoney-machado.vercel.app
+
+## Production stable
+http://frontend-challenge-silvoney-machado.vercel.app
+
+--------
+# Or run it locally
+
+## API key and credentials
+Please refer to the email and create a file called `.env` on root of the project with the content:  
+```
+production=false
+apiURL=https://api.m3o.com/v1
+authApiUrl=https://jwt-node.vercel.app
+apiKey=(provided api key)
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

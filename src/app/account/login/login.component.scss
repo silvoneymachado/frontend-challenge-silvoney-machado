@@ -1,0 +1,31 @@
+.login-card {
+  margin-top: 50px;
+  margin-left: clamp(10px, 5vw, 200px);
+  margin-right: clamp(10px, 5vw, 200px);
+  height: 70%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-btn {
+  width: 100%;
+}
+
+.input-group {
+  width: 100%;
+}
+
+.login-title {
+  text-align: center;
+}
+
